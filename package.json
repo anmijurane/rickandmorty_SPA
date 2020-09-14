@@ -1,0 +1,26 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "it a proyect the platzi.. JS Vanilla",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --modo production",
+    "start": "webpack-dev-server --open --mode development"
+  },
+  "keywords": [
+    "js",
+    "vanilla",
+    "rick",
+    "morty"
+  ],
+  "author": "Andres Jurado <anmijurane@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
