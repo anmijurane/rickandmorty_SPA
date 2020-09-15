@@ -7,7 +7,7 @@ import resolveRoutes from '../utils/resolveRoutes';
 import Footer from '../templates/Footer';
 
 const routes = {
-  '/': Home,
+  '/rickandmorty_SPA/': Home,
   '/:id': Character,
   '/contact': 'Contact',
 };
