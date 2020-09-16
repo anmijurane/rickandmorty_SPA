@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,500;1,100;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -16,6 +17,12 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 5vh;
+}
+
+.Header-nav {
+  font-size: 2rem;
+  font-family: 'Inconsolata', monospace;
+  color: #B2B2B2;
 }
 
 .Characters {
@@ -112,6 +119,7 @@ a:link, a:visited, a:active {
 }
 
 .footer {
+  font-family: 'Inconsolata', monospace;
   margin: 2rem 0rem;
   height: 2rem;
   display: flex;
@@ -125,6 +133,19 @@ a:link, a:visited, a:active {
   margin: .5rem 0;
 }
 
+.Error404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  color: #B2B2B2;
+}
+
+.Error404 img {
+  border-radius: 50%;
+  width: 60vh;
+}
+
 @media (max-width: 800px) {
 
   .Characters-inner {
@@ -132,4 +153,26 @@ a:link, a:visited, a:active {
     flex-direction: column;
   }
 
+  .Error404 img {
+    border-radius: 40%;
+    width: 50vh;
+  }
+
+  .footer {
+    margin: 2rem 0rem;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer li {
+    list-style: none;
+    margin: 1.2rem 0;
+  }
+
+  .Header-logo {
+    width: 60%;
+  }
 }
