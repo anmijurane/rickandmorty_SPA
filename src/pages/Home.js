@@ -40,11 +40,11 @@ const Home = async () => {
         <label> <span>...</span></label>
 
         <label>
-          <a href=${'/#/?page='+(page-2)+'/'}>${page-2}</a>
+          <a href=${'/rickandmorty_SPA/#/?page='+(page-2)+'/'}>${page-2}</a>
         </label>
 
         <label>
-          <a href=${'/#/?page='+(page-1)+'/'}>${page-1}</a>
+          <a href=${'/rickandmorty_SPA/#/?page='+(page-1)+'/'}>${page-1}</a>
         </label>
 
         <label>
@@ -52,11 +52,11 @@ const Home = async () => {
         </label>
 
         <label>
-          <a href=${'/#/?page='+(page+1)+'/'} >${page+1}</a>
+          <a href=${'/rickandmorty_SPA/#/?page='+(page+1)+'/'} >${page+1}</a>
         </label>
 
         <label>
-          <a href=${'/#/?page='+(page+2)+'/'}>${page+2}</a>
+          <a href=${'/rickandmorty_SPA/#/?page='+(page+2)+'/'}>${page+2}</a>
         </label>
 
         <label> <span>...</span></label>
