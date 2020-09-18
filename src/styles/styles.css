@@ -133,6 +133,9 @@ a:link, a:visited, a:active {
   margin: .5rem 0;
 }
 
+#pagActually {
+  color: blue;
+}
 .Error404 {
   display: flex;
   align-items: center;

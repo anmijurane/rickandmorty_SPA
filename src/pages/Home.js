@@ -1,9 +1,25 @@
 import getData from '../utils/getData'
 import getHash from '../utils/getHash';
 
+function getPag(URL) {
+  if (URL) {
+    var dig1 = URL.charAt(URL.length - 2);
+    var dig2 = URL.charAt(URL.length - 1);
+    var pag = dig1 === '=' ? 0 : dig1;
+    console.log(`Pag --> ${pag}${dig2}`);
+    var rx = parseInt(`${pag}${dig2}`, 10) - 1;
+    console.log('getPag --> ' + rx);
+    return rx;
+  } else {
+    console.log('else --> ' + 34);
+    return 34;
+  }
+}
+
 const Home = async () => {
-  const page = await getHash();
-  const characters = await getData(`${page}`);
+  const pageNumber = await getHash();
+  const characters = await getData(`${pageNumber}`);
+  var page = await getPag(characters.info.next);
 
   const view = `
     <div class="Characters">
@@ -21,23 +37,33 @@ const Home = async () => {
     </div>
       <div class="containerBtn">
         <button id="btn--last" class="containerBtn--btnlast">LAST</button>
-        <label>Pag. <span>${getPag(characters.info.next)}</span></label>
+        <label> <span>...</span></label>
+        <label>
+          <a href=${'/#/?page='+(page-2)+'/'}>${page-2}</a>
+        </label>
+
+        <label>
+          <a href=${'/#/?page='+(page-1)+'/'}>${page-1}</a>
+        </label>
+
+        <label>
+          <a href="" id="pagActually">${page}</span>
+        </label>
+
+        <label>
+          <a href=${'/#/?page='+(page+1)+'/'} >${page+1}</a>
+        </label>
+
+        <label>
+          <a href=${'/#/?page='+(page+2)+'/'}>${page+2}</a>
+        </label>
+
+        <label> <span>...</span></label>
+
         <button id="btn-next" class="containerBtn--btnNext">NEXT</button>
     </div>
    `;
   return view;
 };
-
-function getPag (URL) {
-  if (URL) {
-  let pag = URL.charAt(URL.length - 1);
-  console.log("Valor sin mutar: "+pag);
-  console.log(`Valor mutado:  ${pag - 1}`);
-  return `${pag - 1}`;
-  } else {
-    return 1;
-    //return URL.charAt(URL.length - 1);
-  }
-}
 
 export default Home;
