@@ -125,8 +125,23 @@ a:link, a:visited, a:active {
 .containerBtn {
   display: flex;
   justify-content: space-evenly;
-  margin: 5vw 30vw;
+  margin: 5vw 25vw;
   font-size: 1.1em;
+}
+
+.containerBtn--btn {
+  border-radius: 70px;
+  background: darkgrey;
+  padding: 6px;
+}
+
+.containerBtn--btn:hover {
+  color: darkgrey;
+  background: #000;
+}
+
+.disable {
+  display: none;
 }
 
 .footer {
@@ -190,6 +205,14 @@ a:link, a:visited, a:active {
   .containerBtn {
     display: flex;
     justify-content: space-evenly;
-    margin: 0vw 15vw;
+    padding-top: 10vh;
+    margin: 0vh 5vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .containerBtn {
+    padding-top: 5vw;
+    margin: 0vw 0vw;
   }
 }

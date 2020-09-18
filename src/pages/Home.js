@@ -36,32 +36,33 @@ const Home = async () => {
       `).join('')}
     </div>
       <div class="containerBtn">
-        <button id="btn--last" class="containerBtn--btnlast">LAST</button>
-        <label> <span>...</span></label>
+      <label class=${page<=1?'disable':''}>
+      <a href=${'/#/?page=' + (page - 1) + '/'} id="btn-next" class="containerBtn--btn"> LAST </a>
+    </label>
 
-        <label>
-          <a href=${'/rickandmorty_SPA/#/?page='+(page-2)+'/'}>${page-2}</a>
+        <label class=${(page-2) == 0 || (page-2) == -1 ? 'disable' : ''}>
+        <a href=${'/rickandmorty_SPA/#/?page=' +(page == 2 ? '1' : page - 2) + '/'}>${(page == 2 ? '.' : page - 2)}</a>
         </label>
 
-        <label>
-          <a href=${'/rickandmorty_SPA/#/?page='+(page-1)+'/'}>${page-1}</a>
+        <label class=${(page-1) == 0 ? 'disable' : ''}>
+        <a href=${'/rickandmorty_SPA/#/?page=' +(page == 1 ? '1' : page - 1) + '/'}>${(page == 1 ? '.' : page - 1)}</a>
         </label>
 
         <label>
           <a href="" id="pagActually">${page}</a>
         </label>
 
-        <label>
-          <a href=${'/rickandmorty_SPA/#/?page='+(page+1)+'/'} >${page+1}</a>
+        <label class=${(page+1) == 35 || (page+1) == 36 ? 'disable' : ''}>
+          <a href=${'/rickandmorty_SPA/#/?page=' + (page + 1) + '/'} >${page + 1}</a>
         </label>
 
-        <label>
-          <a href=${'/rickandmorty_SPA/#/?page='+(page+2)+'/'}>${page+2}</a>
+        <label class=${(page+2) == 35 || (page+2) == 36 ? 'disable' : ''}>
+          <a href=${'/rickandmorty_SPA/#/?page=' + (page + 2) + '/'}>${page + 2}</a>
         </label>
 
-        <label> <span>...</span></label>
-
-        <button id="btn-next" class="containerBtn--btnNext">NEXT</button>
+        <label class=${page>=34?'disable':''}>
+          <a href=${'/#/?page=' + (page + 1) + '/'} id="btn-next" class="containerBtn--btn"> NEXT </a>
+        </label>
     </div>
    `;
   return view;
