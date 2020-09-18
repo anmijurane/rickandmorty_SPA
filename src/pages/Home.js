@@ -37,7 +37,7 @@ const Home = async () => {
     </div>
       <div class="containerBtn">
       <label class=${page<=1?'disable':''}>
-      <a href=${'/#/?page=' + (page - 1) + '/'} id="btn-next" class="containerBtn--btn"> LAST </a>
+      <a href=${'/rickandmorty_SPA/#/?page=' + (page - 1) + '/'} id="btn-next" class="containerBtn--btn"> LAST </a>
     </label>
 
         <label class=${(page-2) == 0 || (page-2) == -1 ? 'disable' : ''}>
@@ -61,7 +61,7 @@ const Home = async () => {
         </label>
 
         <label class=${page>=34?'disable':''}>
-          <a href=${'/#/?page=' + (page + 1) + '/'} id="btn-next" class="containerBtn--btn"> NEXT </a>
+          <a href=${'/rickandmorty_SPA/#/?page=' + (page + 1) + '/'} id="btn-next" class="containerBtn--btn"> NEXT </a>
         </label>
     </div>
    `;
