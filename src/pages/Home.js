@@ -38,6 +38,7 @@ const Home = async () => {
       <div class="containerBtn">
         <button id="btn--last" class="containerBtn--btnlast">LAST</button>
         <label> <span>...</span></label>
+
         <label>
           <a href=${'/#/?page='+(page-2)+'/'}>${page-2}</a>
         </label>
@@ -47,7 +48,7 @@ const Home = async () => {
         </label>
 
         <label>
-          <a href="" id="pagActually">${page}</span>
+          <a href="" id="pagActually">${page}</a>
         </label>
 
         <label>

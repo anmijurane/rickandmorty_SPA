@@ -118,6 +118,17 @@ a:link, a:visited, a:active {
   }
 }
 
+#pagActually {
+  color: blue;
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5vw 30vw;
+  font-size: 1.1em;
+}
+
 .footer {
   font-family: 'Inconsolata', monospace;
   margin: 2rem 0rem;
@@ -133,9 +144,6 @@ a:link, a:visited, a:active {
   margin: .5rem 0;
 }
 
-#pagActually {
-  color: blue;
-}
 .Error404 {
   display: flex;
   align-items: center;
@@ -177,5 +185,11 @@ a:link, a:visited, a:active {
 
   .Header-logo {
     width: 60%;
+  }
+
+  .containerBtn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0vw 15vw;
   }
 }
